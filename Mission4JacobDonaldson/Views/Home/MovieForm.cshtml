@@ -5,25 +5,25 @@
 
 @model Mission4JacobDonaldson.Models.FormResponse;
 
-<div>
+<div class="container">
     <form method="post">
         <label asp-for="Category">Category:</label>
-        <input asp-for="Category" />
+        <input id="Category" asp-for="Category" type="text" />
         <br />
         <label asp-for="Title">Title:</label>
-        <input asp-for="Title" />
+        <input id="Title" asp-for="Title" type="text" />
         <br />
         <label asp-for="Year">Year:</label>
-        <input asp-for="Year" />
+        <input id="Year" asp-for="Year" type="number" />
         <br />
         <label asp-for="DirectorFirstName">Director First Name:</label>
-        <input asp-for="DirectorFirstName" />
+        <input id="DirectorFirstName" asp-for="DirectorFirstName" type="text" />
         <br />
         <label asp-for="DirectorLastName">Director Last Name:</label>
-        <input asp-for="DirectorLastName" />
+        <input id="DirectorLastName" asp-for="DirectorLastName" type="text" />
         <br />
         <label asp-for="Rating">Rating:</label>
-        <select asp-for="Rating">
+        <select id="Rating" asp-for="Rating">
             <option value="G">G</option>
             <option value="PG">PG</option>
             <option value="PG-13">PG-13</option>
@@ -31,18 +31,23 @@
         </select>
         <br />
         <label asp-for="Edited">Edited:</label>
-        <select asp-for="Edited">
+        <select id="Edited" asp-for="Edited">
             <option value="true">Yes</option>
             <option value="false">No</option>
         </select>
         <br />
         <label asp-for="LentTo">Lent To:</label>
-        <input asp-for="LentTo" />
+        <input id="LentTo" asp-for="LentTo" type="text" />
         <br />
         <label asp-for="Notes">Notes:</label>
-        <textarea asp-for="Notes"></textarea>
+        <textarea asp-for="Notes" rows="2"></textarea>
         <br />
-        <button type="submit">Submit Movie</button>
+        <input id="btnSend" type="submit" value="Submit" />
+        <div asp-validation-summary="All"></div>
+        <br />
+      
+
     </form>
+    
     <!--Add in error response if required field is not intered-->
 </div>

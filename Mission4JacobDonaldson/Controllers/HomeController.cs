@@ -37,20 +37,19 @@ namespace Mission4JacobDonaldson.Controllers
         [HttpPost]
         public IActionResult MovieForm(FormResponse Response)
         {
-            _contexter.Add(Response);
-            //adds response and then saves it
-            _contexter.SaveChanges();
-            return View("Confirmation", Response);
-        }
-        public IActionResult Privacy()
-        {
-            return View();
+            if (ModelState.IsValid)
+            {
+                _contexter.Add(Response);
+                //adds response and then saves it
+                _contexter.SaveChanges();
+                return View("Confirmation", Response);
+            }
+            else
+            {
+                return View();
+            }
+            
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }

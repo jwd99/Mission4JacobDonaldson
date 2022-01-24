@@ -8,6 +8,7 @@ namespace Mission4JacobDonaldson.Models
 {
     public class FormResponse
     { //sets each field but the last 3 to requred and the first value is the primary key
+        
         [Key]
         [Required]
         public int MovieId { get; set; }
@@ -15,6 +16,7 @@ namespace Mission4JacobDonaldson.Models
         public string Category { get; set; }
         [Required]
         public string Title { get; set; }
+        
         [Required]
         public int Year { get; set; }
         [Required]
@@ -23,7 +25,6 @@ namespace Mission4JacobDonaldson.Models
         public string DirectorLastName { get; set; }
         [Required]
         public string Rating { get; set; }
-
         public bool Edited { get; set; }
         public string LentTo { get; set; }
         [MaxLength(25)]

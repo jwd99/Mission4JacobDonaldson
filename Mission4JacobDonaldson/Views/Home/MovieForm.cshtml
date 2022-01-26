@@ -5,6 +5,7 @@
 
 @model Mission4JacobDonaldson.Models.FormResponse;
 
+<!--Movie Form Information-->
 <div class="container">
     <form method="post">
         <label asp-for="Category">Category:</label>
@@ -42,6 +43,7 @@
         <label asp-for="Notes">Notes:</label>
         <textarea asp-for="Notes" rows="2"></textarea>
         <br />
+        <!--Displays validation requirments if not met-->
         <input id="btnSend" type="submit" value="Submit" />
         <div asp-validation-summary="All"></div>
         <br />
@@ -49,5 +51,5 @@
 
     </form>
     
-    <!--Add in error response if required field is not intered-->
+   
 </div>

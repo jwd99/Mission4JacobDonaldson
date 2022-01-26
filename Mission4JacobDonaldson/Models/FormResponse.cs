@@ -27,6 +27,7 @@ namespace Mission4JacobDonaldson.Models
         public string Rating { get; set; }
         public bool Edited { get; set; }
         public string LentTo { get; set; }
+        //keeps notes field to a limit of 25 characters
         [MaxLength(25)]
         public string Notes { get; set; }
 

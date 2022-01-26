@@ -37,6 +37,7 @@ namespace Mission4JacobDonaldson.Controllers
         [HttpPost]
         public IActionResult MovieForm(FormResponse Response)
         {
+            //If the form model data is valid then add and save changes to the database
             if (ModelState.IsValid)
             {
                 _contexter.Add(Response);
@@ -44,6 +45,7 @@ namespace Mission4JacobDonaldson.Controllers
                 _contexter.SaveChanges();
                 return View("Confirmation", Response);
             }
+            //If the form model data is not valid then return the view and show validation information.
             else
             {
                 return View();

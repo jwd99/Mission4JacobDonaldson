@@ -16,8 +16,7 @@ namespace Mission4JacobDonaldson.Models
         public string Category { get; set; }
         [Required]
         public string Title { get; set; }
-        
-        [Required]
+        [Required(ErrorMessage = "Please input a year value like 2021")]
         public int Year { get; set; }
         [Required]
         public string DirectorFirstName { get; set; }

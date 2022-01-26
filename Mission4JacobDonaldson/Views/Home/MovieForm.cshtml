@@ -15,7 +15,7 @@
         <input id="Title" asp-for="Title" type="text" />
         <br />
         <label asp-for="Year">Year:</label>
-        <input id="Year" asp-for="Year" type="number" />
+        <input id="Year" asp-for="Year" data- type="number" />
         <br />
         <label asp-for="DirectorFirstName">Director First Name:</label>
         <input id="DirectorFirstName" asp-for="DirectorFirstName" type="text" />
@@ -45,7 +45,8 @@
         <br />
         <!--Displays validation requirments if not met-->
         <input id="btnSend" type="submit" value="Submit" />
-        <div asp-validation-summary="All"></div>
+        <div asp-validation-summary="All">
+        </div>
         <br />
       
 
